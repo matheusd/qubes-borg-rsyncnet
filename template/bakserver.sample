@@ -1,0 +1,5 @@
+Host bakserver 
+  HostName <SERVER SENT BY>.rsync.net
+  User <USERNAME SENT BY RSYNC.NET>
+  IdentityFile ~/.ssh/backups/$HOST
+

@@ -1,3 +1,3 @@
-# Crontab to run borgmatic
+# Crontab to run borgmatic once an hour
 RANDOM_DELAY=20
-03 * * * * borgmatic -c ~/.ssh/backups/borgmatic.cfg
+03 * * * * /usr/bin/borgmatic -c /home/user/.ssh/backups/borgmatic.cfg
