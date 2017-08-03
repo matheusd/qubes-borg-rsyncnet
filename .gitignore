@@ -1,0 +1,4 @@
+host-keys
+authorized_keys
+admin-key.*
+template/bakserver

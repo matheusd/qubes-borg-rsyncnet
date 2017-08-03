@@ -1,0 +1,15 @@
+#!/bin/sh
+
+PASS=`cat ~/.ssh/backups/borgpass`
+REPO=`cat ~/.ssh/backups/borgrepo`
+ARCHIVE=$2
+CMD=$1
+
+if [[ ! -z $ARCHIVE ]] ; then
+  ARCHIVE="::$ARCHIVE"
+fi
+
+export BORG_PASSPHRASE=$PASS
+borg $CMD --remote-path=borg1 bakserver:repos/$REPO$ARCHIVE
+unset BORG_PASSPHRASE
+
